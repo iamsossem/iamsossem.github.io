@@ -20,8 +20,7 @@ body{
     "lec"
     "project"
     "note"
-    "sns"
-    "footer";
+    "sns";
 }
 #logo{
     display: none;
@@ -145,16 +144,32 @@ section > div.card > div.line > p:nth-child(2){
     align-items: center;
 }
 #note > p{
-    width: 40%;
+    width: 50%;
+    height: 100%;
     font-size: 5vw;
+    background-image: url('../images/click-white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #note > div{
-    width: 60%;
+    width: 50%;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #sns{
     grid-area: sns;
-    background-color: #fff8ee;
+    height: 50vh;
+    background-color: #000;
+    font-size: 5vw;
+    padding: 30px 50px 0 80px;
 }
-footer{
-    grid-area: footer;
+#sns > p{
+    height: 100%;
+    background-image: url('../images/flower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
 }
