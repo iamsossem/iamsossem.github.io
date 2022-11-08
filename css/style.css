@@ -163,8 +163,8 @@ section > div.card > div.line > p:nth-child(2){
     grid-area: sns;
     height: 50vh;
     background-color: #000;
-    font-size: 5vw;
-    padding: 80px 0 0 80px;
+    font-size: 3vw;
+    padding: 80px 0 0 30px;
 }
 #sns > p{
     height: 100%;
