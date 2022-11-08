@@ -36,13 +36,12 @@ nav{
     grid-area: gnb;
     height: 50px;    
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 nav > a{
-    font-size: 2vw;
+    font-size: 4vw;
     display: block;
-    padding: 0 20px;
 }
 #banner{
     grid-area: bar;
