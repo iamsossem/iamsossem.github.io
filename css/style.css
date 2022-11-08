@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+html{
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 2px;
+}
+body{
+    background-color: #000;
+    color: #fff8ee;
+    width: 100%;    
+}
+#wrapper{
+    min-width: 320px;
+    display: grid;
+    grid-template-areas: 
+    "gnb"
+    "bar"
+    "about"
+    "lec"
+    "project"
+    "note"
+    "sns"
+    "footer";
+}
+#logo{
+    display: none;
+    grid-area: logo;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #fff8ee;
+}
+nav{
+    grid-area: gnb;
+    height: 50px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > a{
+    font-size: 3vw;
+    display: block;
+    padding: 0 20px;
+}
+#banner{
+    grid-area: bar;
+    height: 70vh;
+}
+#banner > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#banner > .contents{
+    height: 80%;
+    font-size: 10vw;
+}
+#banner > .click{
+    height: 20%;
+    font-size: 5vw;
+    background-color: #ff7717;
+}
+section{
+    height: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section > div.card{
+    width: 50%;
+    height: 80%;   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+section > div.card > div.line{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border: 5px solid #7894ff;
+}
+section > div.card > div.line > p:nth-child(1){
+    height: 70%;
+    font-size: 18vw;
+}
+section > div.card > div.line > p:nth-child(2){
+    height: 30%;
+    font-size: 3vw;
+    background-color: #7894ff;
+}
+#about{
+    grid-area: about;
+    flex-direction: column;
+}
+#about > div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    color: #000;  
+}
+#about > div:nth-child(1){
+    background-color: #ffdb43;
+    font-size: 3vw;
+}
+#about > div:nth-child(2){
+    background-color: #ff7717;
+    font-size: 10vw;
+    text-align: center;    
+}
+#about > div:nth-child(2) > p{
+    border: 5px solid #ffdb43;
+    padding: 0 50px;
+}
+#about > div:nth-child(2) > p:nth-child(1){
+    background-color: #ffdb43;
+}
+#lecture{
+    grid-area: lec;
+    background-color: #7894ff;
+}
+#lecture > .card{
+    background-color: #000;
+}
+#project{
+    grid-area: project;
+    background-color: #000;
+    color: #000;
+}
+#project > .card{
+    background-color: #fff8ee;
+}
+
+#note{
+    grid-area: note;   
+    height: 30vw;
+    background-color: #ffade0;  
+    padding: 10px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#note > p{
+    width: 40%;
+    font-size: 5vw;
+}
+#note > div{
+    width: 60%;
+}
+#sns{
+    grid-area: sns;
+    background-color: #fff8ee;
+}
+footer{
+    grid-area: footer;
+}
