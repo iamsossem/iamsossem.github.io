@@ -148,11 +148,15 @@ section > .sub-title > p:nth-child(1) {
   border: 2px solid #fff8ee;
   border-radius: 10px;
   margin: 20px;
+  overflow: hidden;
 }
 .items > .item-list > div {
   width: 100%;
   height: 80%;
   border-bottom: 2px solid #fff8ee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .items > .item-list > p {
   padding-top: 10px;
