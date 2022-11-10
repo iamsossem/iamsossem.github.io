@@ -1,213 +1,155 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
-html{
-    font-family: 'Do Hyeon', sans-serif;
-    letter-spacing: 2px;
+html {
+  font-family: "Do Hyeon", sans-serif;
+  letter-spacing: 2px;
 }
-body{
-    background-color: #000;
-    color: #fff8ee;
-    width: 100%;    
+body {
+  background-color: #000;
+  color: #fff8ee;
+  width: 100%;
 }
-#wrapper{
-    min-width: 320px;
-    display: grid;
-    grid-template-areas: 
-    "gnb"
-    "bar"
-    "about"
-    "lec"
-    "project"
-    "note"
-    "sns";
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
 }
-#logo{
-    display: none;
-    grid-area: logo;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    border-radius: 50%;
-    background-color: #fff8ee;
-    background-image: url('../images/icon.jpg');
-    background-size: cover;
+#logo {
+  display: none;
+  grid-area: logo;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #fff8ee;
+  background-image: url("../images/icon.jpg");
+  background-size: cover;
 }
-nav{
-    grid-area: gnb;
-    height: 50px;    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-nav > a{
-    font-size: 20px;
-    display: block;
+nav > a {
+  display: block;
+  color: #fff8ee;
+  font-size: 0.8em;
+  padding: 0 5px;
 }
-#banner{
-    grid-area: bar;
-    height: 70vh;
+section {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#banner > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card-wrap {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
 }
-#banner > .contents{
-    height: 80%;
-    font-size: 7vw;
+.card-wrap:hover .card {
+  transform: rotateY(180deg);
 }
-#banner > .click{
-    height: 20%;
-    font-size: 5vw;
-    background-color: #ff7717;
+.card-wrap > .card {
+  width: 70%;
+  height: 90%;
+  background-color: #7894ff;
+  position: relative;
+  transition: 1s;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
 }
-section{
-    width: 100%;
-    height: 50vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.card-wrap > .card > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
-section > div{
-    width: 100%;
+.card-wrap > .card > .front {
+  z-index: 1;
 }
-section > div.card{
-    width: 70%;
-    height: 80%;   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+.card-wrap > .card > .front > p:nth-child(1) {
+  width: 96%;
+  height: 70%;
+  margin: 2% auto;
+  font-size: 10rem;
+  text-align: center;
 }
-section > div.card > div.line{
-    width: 80%;
-    height: 80%;
-    text-align: center;
-    border: 6px solid #7894ff;
+.card-wrap > .card > .front > p:nth-child(2) {
+  font-size: 2rem;
+  text-align: center;
 }
-section > div.card > div.line > p:nth-child(1){
-    height: 70%;
-    font-size: 18vw;
+.card-wrap > .card > .back {
+  text-align: center;
+  transform: rotateY(180deg);
+  background-color: #7894ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
-section > div.card > div.line > p:nth-child(2){
-    height: 30%;
-    font-size: 3vw;
-    background-color: #7894ff;
+section#about{
+    background-color: #ffade0;
 }
-#about{
-    grid-area: about;
-    flex-direction: column;
+section#info {
+  color: #fff8ee;
+  background-color: #000;
+  display: block;
 }
-#about > div{
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    color: #000;  
+section#info > .contact {
+  color: #222;
+  background-color: #ffdb43;
 }
-#about > div:nth-child(1){
-    background-color: #ffdb43;
-    font-size: 3vw;
+section#lecture {
+  color: #fff8ee;
+  background-color: #7894ff;
 }
-#about > div:nth-child(2){
-    background-color: #ff7717;
-    font-size: 10vw;
-    text-align: center;    
+section#project {
+  color: #222;
+  background-color: #000;
 }
-#about > div:nth-child(2) > p{
-    border: 5px solid #ffdb43;
-    padding: 0 50px;
-}
-#about > div:nth-child(2) > p:nth-child(1){
-    background-color: #ffdb43;
-}
-#lecture{
-    grid-area: lec;
-    background-color: #7894ff;
-}
-#lecture > .card{
-    background-color: #000;
-}
-#project{
-    grid-area: project;
-    background-color: #000;
-    color: #000;
-}
-#project > .card{
-    background-color: #fff8ee;
+section#footer {
+  color: #fff8ee;
+  background-color: #ff7717;
 }
 
-#note{
-    grid-area: note;   
-    height: 50vh;
-    background-color: #ffade0;  
-    padding: 10px;   
-    display: flex;
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1000px) {
+  #wrapper {
+    flex-direction: row;    
+  }
+  section{
+    width: 33.33333%;
+  }
+  section:nth-child(4){
+    width: 60%;
+  }
+
+  header {
     justify-content: space-between;
-    align-items: center;
-}
-#note > p{
-    width: 30%;
-    height: 100%;
-    font-size: 5vw;
-    background-image: url('../images/click-white.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-#note > div{
-    width: 70%;
-    font-size: 3vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#sns{
-    grid-area: sns;
-    height: 50vh;
-    background-color: #000;
-    font-size: 3vw;
-    padding: 30px 0px 0px 30px;
-}
-#sns > p{
-    height: 100%;
-    background-image: url('../images/flower.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-}
-
-@media screen and (min-width:1024px) {
-    #wrapper{
-        display: grid;
-        grid-template-areas: 
-        "logo gnb gnb"
-        "bar bar bar"
-        "about lec project"
-        "sns note note";
-    }
-    #logo{
-        display: block;
-    }
-    nav{
-        justify-content: flex-end;
-        align-items: center;
-    }
-    nav > a{
-        font-size: 30px;
-        padding: 0 20px;
-        display: block;
-    } 
-    #about > div:nth-child(1){
-        background-color: #ffdb43;
-        font-size: 30px;
-    }
-    #about > div:nth-child(2){
-        background-color: #ff7717;
-        font-size: 50px;
-        text-align: center;    
-    }
-
+  }
+  #logo {
+    display: block;
+  }
+  nav > a {
+    font-size: 30px;
+    padding-right: 50px;
+  }
 }
