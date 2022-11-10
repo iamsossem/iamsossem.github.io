@@ -101,7 +101,7 @@ section.history {
 }
 
 section.history > .career {
-  width: 80%;
+  width: 100%;
   max-width: 550px;
   margin: 30px auto;
   text-align: left;
@@ -112,7 +112,6 @@ section.history > .career > .date {
   border-bottom: 1px solid #fff8ee;
   margin: 10px 0;
   padding: 5px;
-  font-size: 20px;
 }
 section.history > .career > .date > span {
   display: inline-block;
@@ -121,11 +120,9 @@ section.history > .career > .date > span {
 }
 section.history > .career > .date > span:nth-child(1) {
   border-right: 1px solid #fff8ee;
-  width: 50%;
+  width: 40%;
 }
-section.history > .career > .date > span:nth-child(2) {
-  font-weight: bolder;
-}
+
 section.history > .career > .work {
   margin-left: 20px;
 }
