@@ -30,6 +30,8 @@ body{
     margin: 10px;
     border-radius: 50%;
     background-color: #fff8ee;
+    background-image: url('../images/icon.jpg');
+    background-size: cover;
 }
 nav{
     grid-area: gnb;
@@ -39,7 +41,7 @@ nav{
     align-items: center;
 }
 nav > a{
-    font-size: 4vw;
+    font-size: 20px;
     display: block;
 }
 #banner{
@@ -54,7 +56,7 @@ nav > a{
 }
 #banner > .contents{
     height: 80%;
-    font-size: 10vw;
+    font-size: 7vw;
 }
 #banner > .click{
     height: 20%;
@@ -62,14 +64,18 @@ nav > a{
     background-color: #ff7717;
 }
 section{
+    width: 100%;
     height: 50vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+section > div{
+    width: 100%;
+}
 section > div.card{
-    width: 50%;
+    width: 70%;
     height: 80%;   
     display: flex;
     justify-content: center;
@@ -79,7 +85,7 @@ section > div.card > div.line{
     width: 80%;
     height: 80%;
     text-align: center;
-    border: 5px solid #7894ff;
+    border: 6px solid #7894ff;
 }
 section > div.card > div.line > p:nth-child(1){
     height: 70%;
@@ -95,7 +101,6 @@ section > div.card > div.line > p:nth-child(2){
     flex-direction: column;
 }
 #about > div{
-    width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -136,7 +141,7 @@ section > div.card > div.line > p:nth-child(2){
 
 #note{
     grid-area: note;   
-    height: 30vw;
+    height: 50vh;
     background-color: #ffade0;  
     padding: 10px;   
     display: flex;
@@ -144,7 +149,7 @@ section > div.card > div.line > p:nth-child(2){
     align-items: center;
 }
 #note > p{
-    width: 50%;
+    width: 30%;
     height: 100%;
     font-size: 5vw;
     background-image: url('../images/click-white.png');
@@ -153,7 +158,7 @@ section > div.card > div.line > p:nth-child(2){
     background-position: center center;
 }
 #note > div{
-    width: 50%;
+    width: 70%;
     font-size: 3vw;
     display: flex;
     flex-direction: column;
@@ -164,12 +169,45 @@ section > div.card > div.line > p:nth-child(2){
     height: 50vh;
     background-color: #000;
     font-size: 3vw;
-    padding: 80px 0 0 30px;
+    padding: 30px 0px 0px 30px;
 }
 #sns > p{
     height: 100%;
     background-image: url('../images/flower.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: right bottom;
+}
+
+@media screen and (min-width:1024px) {
+    #wrapper{
+        display: grid;
+        grid-template-areas: 
+        "logo gnb gnb"
+        "bar bar bar"
+        "about lec project"
+        "sns note note";
+    }
+    #logo{
+        display: block;
+    }
+    nav{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav > a{
+        font-size: 30px;
+        padding: 0 20px;
+        display: block;
+    } 
+    #about > div:nth-child(1){
+        background-color: #ffdb43;
+        font-size: 30px;
+    }
+    #about > div:nth-child(2){
+        background-color: #ff7717;
+        font-size: 50px;
+        text-align: center;    
+    }
+
 }
