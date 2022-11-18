@@ -66,40 +66,33 @@ section.book {
 }
 
 /**** about ****/
+.resume-wrap{
+  display: block;
+}
 section.info {
   width: 100%;
   height: 400px;
-  display: flex;
 }
-
-section.info > .img {
-  width: 60%;
-  background-color: #7894ff;  
+section.info > .image{
+  display: block;
+  width: 100%;
+  height: 70%;
+  background-color: #7894ff;
   background-image: url('../images/icon.png');
-  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-size: contain;
+  background-position: center;
 }
-
-section.info > .tag {
-  width: 40%;
+section.info > .resume{
+  padding: 10px;
+  background-color: #000;
   color: #fff8ee;
-  background-color: #ff7717;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 30px 0;
-}
-section.resume {
-  color: #fff8ee;
-  background-color: #222;
   text-align: center;
-  padding: 10px 20px;  
 }
-section.resume > a{
+section.info > .resume span{
   text-decoration: underline;
 }
+
 section.history {
   background-color: #ffdb43;
   padding: 30px 10px;
@@ -127,10 +120,6 @@ section.history > .career > .date > span:nth-child(1) {
 
 section.history > .career > .work {
   margin-left: 20px;
-}
-.resume-wrap {
-  display: flex;
-  flex-direction: column;
 }
 
 /********************/
@@ -200,13 +189,20 @@ section > .sub-title > p:nth-child(1) {
     font-size: 50px;
     font-weight: bolder;
   }
-  .resume-wrap {
-    flex-direction: row;
+  .resume-wrap{
+    display: flex;
   }
-  section.resume{
-    width: 30%;
+  section.info{
+    width: 40%;
+  }
+  section.info > .resume > h1{
+    font-size: 40px;
+  }
+  section.info > .resume span{
+    display: block;
   }
   section.history{
-    width: 70%;
+    width: 60%;
   }
+
 }
