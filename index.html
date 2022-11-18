@@ -22,6 +22,7 @@
       <div class="contents">
         <p>So Eun-kyung's</p>
         <p>PORTFOLIO</p>
+        <br>
         <p>Click On Items</p>
       </div>
     </section>
@@ -44,12 +45,16 @@
       </section>
       <section id="info">
         <div class="contact">
-          <p>
-            관심있는 일이라 생각하시나요? <br />
-            부담없이 연락하십시요. <br /><br />
-            ✉︎ chloesso@naver.com <br />
-            ☎︎ 010-6225-0446
-          </p>
+          <p>관심있는 일이라 생각하시나요? </p>
+          <p>부담없이 연락하십시요.</p>
+          <br>
+          <p>✉︎ chloesso@naver.com </p>
+          <p><a href="tel:">☎︎ 010-6225-0446</a></p>
+          <br>
+          <div class="sns">
+            <a href="https://blog.naver.com/chloesso" target="_blank">네이버블로그</a>
+            <a href="">티스토리</a>
+          </div>          
         </div>
       </section>
       <section id="lecture">
@@ -85,7 +90,7 @@
         </div>
       </section>
     </div>
-    <script>
+    <script>      
       const cards = document.querySelectorAll(".card-wrap");
       const onClick = (e) => {
         const target = e.currentTarget;
@@ -100,6 +105,15 @@
       cards.forEach((v, i) => {
         v.addEventListener("click", onClick);
       });
+      //
+      let change=0;
+      const changeP=document.querySelectorAll('section#banner > .contents > p');      
+      setInterval( ()=>{
+        changeP[change].style.color = "";
+        change++;
+        if( change > 2 ){ change=0; }
+        changeP[change].style.color = "#46ee96";
+      },500);
     </script>
   </body>
 </html>

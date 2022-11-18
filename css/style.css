@@ -99,17 +99,40 @@ section {
   align-items: center;
   font-size: 2rem;
 }
+section#banner > .contents{
+  text-align: center;
+  font-size: 6vh;
+}
+section#banner > .contents > p{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #46ee96;
+  color: transparent;
+  font-weight: bolder;
+}
 section#about{
-    background-color: #ffade0;
+  background-color: #ff7717;
 }
 section#info {
   color: #fff8ee;
-  background-color: #000;
-  display: block;
+  background-color: #ffdb43;
+  background-image: url('../images/light.png');
+  background-size: cover;
+  background-position: center;
+  animation-name: move;
 }
 section#info > .contact {
+  font-size: 3vh;
   color: #222;
-  background-color: #ffdb43;
+  text-align: center;  
+}
+section#info > .contact > .sns > a{
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+}
+section#info > .contact > .sns > a:hover{
+  background-color: rgba(0,0,0,0.5);
+  color: #fff8ee;
 }
 section#lecture {
   color: #fff8ee;
@@ -121,7 +144,13 @@ section#project {
 }
 section#footer {
   color: #fff8ee;
-  background-color: #ff7717;
+  background-color: #ffade0;
+  background-image: url('../images/flower.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+section#footer > p{
+  font-size: 4vh;
 }
 
 #wrapper {
@@ -140,6 +169,9 @@ section#footer {
   }
   section:nth-child(4){
     width: 60%;
+  }
+  section#banner{
+    width: 100%;
   }
 
   header {
