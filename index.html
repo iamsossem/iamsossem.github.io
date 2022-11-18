@@ -34,8 +34,10 @@
               <p>About</p>
             </div>
             <div class="back">
-              <p>HOPE YOU <br />
-                ENJOYED!</p>
+              <p>
+                HOPE YOU <br />
+                ENJOYED!
+              </p>
             </div>
           </div>
         </div>
@@ -84,21 +86,20 @@
       </section>
     </div>
     <script>
-      const cards = document.querySelectorAll('.card-wrap');
+      const cards = document.querySelectorAll(".card-wrap");
       const onClick = (e) => {
         const target = e.currentTarget;
-        if( target.classList.contains('one') ){
-          location.href="./about.html";
-        } else if( target.classList.contains('two') ){
-          location.href="./lecture.html";
-        } else if( target.classList.contains('three')) {
-          location.href="./project.html";
+        if (target.classList.contains("one")) {
+          location.href = "./about.html";
+        } else if (target.classList.contains("two")) {
+          location.href = "./lecture.html";
+        } else if (target.classList.contains("three")) {
+          location.href = "./project.html";
         }
-      }
-      cards.forEach( (v,i) => {
-        v.addEventListener('click',onClick );
-      })
-
+      };
+      cards.forEach((v, i) => {
+        v.addEventListener("click", onClick);
+      });
     </script>
   </body>
 </html>
