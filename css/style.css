@@ -125,12 +125,12 @@ section#info > .contact {
   color: #222;
   text-align: center;  
 }
-section#info > .contact > .sns > a{
-  padding: 10px 20px;
+section#info > .contact > .sns  a{
+  padding: 5px 20px;
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
 }
-section#info > .contact > .sns > a:hover{
+section#info > .contact > .sns  a:hover{
   background-color: rgba(0,0,0,0.5);
   color: #fff8ee;
 }
