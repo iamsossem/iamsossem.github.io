@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>@iamsossem</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+        }
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        li{
+          cursor: pointer;
+          padding: 20px;
+
+        }
+    </style>
+  </head>
+  <body>
+    <h1>웹 디자인 기능사 시험 문제 뷰어</h1>
+    <ul>
+        <li data-filename="01A-1">A형-1</li>
+        <li data-filename="02A-2">A형-2</li>
+        <li data-filename="03A-3">A형-3</li>
+        <li data-filename="04A-4">A형-4</li>
+        <li data-filename="05B-1">B형-1</li>
+        <li data-filename="06B-2">B형-2</li>
+        <li data-filename="07B-3">B형-3</li>
+        <li data-filename="08B-4">B형-4</li>
+        <li data-filename="09C-1">C형-1</li>
+        <li data-filename="10C-2">C형-2</li>
+        <li data-filename="11C-3">C형-3</li>
+        <li data-filename="12C-4">C형-4</li>
+    </ul>
+    <iframe width="100%" height="800" src="./web/01A-1.pdf"></iframe>
+  </body>
+  <script>
+    const elemLi = document.querySelectorAll('li');
+    const pdfElem = document.querySelector('iframe');
+    elemLi.forEach( (v) => {
+        v.addEventListener('click', ()=>{
+            pdfElem.setAttribute('src',`./web/${v.dataset.filename}.pdf`);
+        });
+    });
+  </script>
+</html>
